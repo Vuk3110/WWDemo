@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.CodeAnalysis;
+using Microsoft.EntityFrameworkCore;
 using WWDemo.Models;
 
 namespace WWDemo.Data.Products
@@ -38,6 +39,11 @@ namespace WWDemo.Data.Products
             await _apiDbContext.SaveChangesAsync();
 
             return result.Entity;
+        }
+
+        Task<Product?> GetProductBySerialNumber(string serialNumber)
+        {
+            return GetQueryable().FirstOrDefaultAsync(x => x!.SerialNumber == serialNumber);
         }
 
         private IQueryable<Product?> GetQueryable()
