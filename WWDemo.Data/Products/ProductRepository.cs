@@ -41,7 +41,7 @@ namespace WWDemo.Data.Products
             return result.Entity;
         }
 
-        Task<Product?> GetProductBySerialNumber(string serialNumber)
+        public Task<Product?> GetProductBySerialNumber(string serialNumber)
         {
             return GetQueryable().FirstOrDefaultAsync(x => x!.SerialNumber == serialNumber);
         }
