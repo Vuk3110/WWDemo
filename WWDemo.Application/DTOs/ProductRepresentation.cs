@@ -22,5 +22,7 @@
 
 		public string? NoviTest { get; set; }
 		public string? TestOpet { get; set; }
+
+		public string? NovoNovo { get; set; }
 	}
 }
