@@ -25,6 +25,5 @@
 
 		public string? NovoNovo { get; set; }
 
-		public string? Vezba { get; set; }
 	}
 }
