@@ -12,5 +12,7 @@
 		public string? Description { get; set; }
 
 		public string? ThirdCategory { get; set; }
+
+		public string? Proba { get; set; }
 	}
 }
