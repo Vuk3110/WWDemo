@@ -16,5 +16,8 @@
 		public string? Proba { get; set; }
 
 		public string? Test { get; set; }
+
+
+		public string? ForthCategory { get; set; }
 	}
 }
