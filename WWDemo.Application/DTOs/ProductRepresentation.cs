@@ -19,6 +19,8 @@
 
 		public string? ForthCategory { get; set; }
 
+
+		public string? NoviTest { get; set; }
 		public string? TestOpet { get; set; }
 	}
 }
