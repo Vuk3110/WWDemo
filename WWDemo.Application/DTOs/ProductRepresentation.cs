@@ -13,6 +13,9 @@
 
 		public string? ThirdCategory { get; set; }
 
+		public string? Proba { get; set; }
+
+
 		public string? ForthCategory { get; set; }
 	}
 }
