@@ -10,5 +10,7 @@
 		public string? SecondCategory { get; set; }
 
 		public string? Description { get; set; }
+
+		public string? ThirdCategory { get; set; }
 	}
 }
