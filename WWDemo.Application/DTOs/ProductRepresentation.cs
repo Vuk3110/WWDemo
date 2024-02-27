@@ -8,5 +8,7 @@
 		public string? Category { get; set; }
 
 		public string? SecondCategory { get; set; }
+
+		public string? Description { get; set; }
 	}
 }
