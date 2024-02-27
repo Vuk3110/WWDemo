@@ -19,5 +19,7 @@
 
 
 		public string? ForthCategory { get; set; }
+
+		public string? NoviTest { get; set; }
 	}
 }
