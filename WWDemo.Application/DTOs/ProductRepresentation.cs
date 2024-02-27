@@ -17,7 +17,8 @@
 
 		public string? Test { get; set; }
 
-
 		public string? ForthCategory { get; set; }
+
+		public string? TestOpet { get; set; }
 	}
 }
