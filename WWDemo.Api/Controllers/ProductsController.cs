@@ -5,6 +5,7 @@ using WWDemo.Application.DTOs;
 using WWDemo.Application.Products.Commands.AddProduct;
 using WWDemo.Application.Products.Queries.GetAllProducts;
 using WWDemo.Application.Products.Queries.GetProductBySerialNumber;
+using WWDemo.Application.Products.Queries.DeleteProductBySerialNumber;
 
 namespace WWDemo.Api.Controllers
 {
@@ -47,15 +48,18 @@ namespace WWDemo.Api.Controllers
 		[HttpGet("{serial-number}")]
 		public async Task<ProductRepresentation> GetProductBySerialNumber([FromRoute(Name = "serial-number")]string serialNumber)
 		{
-            var result = await _mediator.Send(new GetProductBySerialNumberQuery(serialNumber));// map serial number
+            var result = await _mediator.Send(new GetProductBySerialNumberQuery(serialNumber));
             
 			return result;
 		}
 
-		[HttpDelete]
-		public async Task<IActionResult> DeleteProduct()
-		{
-			return Ok();
-		}
-	}
+        [HttpDelete("{serial-number}")]
+        public async Task<Unit> DeleteProductBySerialNumber([FromRoute(Name = "serial-number")] string serialNumber)
+        {
+            var result = await _mediator.Send(new DeleteProductBySerialNumberQuery(serialNumber));
+
+            return result;
+        }
+
+    }
 }

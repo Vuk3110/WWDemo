@@ -1,5 +1,6 @@
 using WWDemo.Application.Products.Commands.AddProduct;
 using WWDemo.Application.Products.Queries.GetAllProducts;
+
 using WWDemo.Data.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
