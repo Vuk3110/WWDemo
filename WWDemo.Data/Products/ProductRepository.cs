@@ -46,6 +46,22 @@ namespace WWDemo.Data.Products
             return GetQueryable().FirstOrDefaultAsync(x => x!.SerialNumber == serialNumber);
         }
 
+        public async Task DeleteProductBySerialNumber(string SerialNumber)
+        {
+            var product = await GetProductBySerialNumber(SerialNumber);
+
+            if (product != null)
+            {
+                
+                var result = _apiDbContext.Products.Remove(product);
+                _apiDbContext.SaveChangesAsync();
+
+            }
+            
+
+
+        }
+
         private IQueryable<Product?> GetQueryable()
         {
             var products = _apiDbContext.Products;
